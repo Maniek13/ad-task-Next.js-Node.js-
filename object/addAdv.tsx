@@ -16,7 +16,7 @@ class AddAdvertisment extends React.Component <any, any> {
 
   onButtonClick(){
     if(!this.state.name || !this.state.description || !this.state.date){
-      console.log("Nie podano")
+      alert("Not enough data")
     }
     else{
       this.advertisment.add(this.getAmount(), this.state.name, this.state.description, this.state.date);
