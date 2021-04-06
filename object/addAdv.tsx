@@ -1,10 +1,8 @@
 import React from 'react'
-import styles from '../styles/index.module.css'
+import styles from '../pages/styles/index.module.css'
 import IAdvertisment from '../state/IAdvertisment'
 import Advertisement from './adv'
-import ShowAdvertismentList from '../object/schowAdv'
-
-
+import ShowAdvertismentList from './schowAdv'
 
 
 class AddAdvertisment extends React.Component <any, any> {

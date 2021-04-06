@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/index.module.css'
+import styles from '../pages/styles/index.module.css'
 import Advertisement from './adv'
 
 class ShowAdvertismentList extends React.Component <any, any>{
