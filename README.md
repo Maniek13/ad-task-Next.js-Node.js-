@@ -1,4 +1,6 @@
-# api v 0.001
+# Next.js rest api
+
+Aplication to add advertisment to database
 
 
 1. Create Next.js app
