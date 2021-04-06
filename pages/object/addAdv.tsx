@@ -61,7 +61,7 @@ render() {
     <button className={styles.action_button} onClick={this.onButtonClick.bind(this)}>Add</button>
     </section>
     </div>
-    {<ShowAdvertismentList/>}
+    <ShowAdvertismentList/>
     </React.Fragment>
     );
   }
