@@ -5,5 +5,4 @@ interface IAdvertisment{
     date:Date;
   }
 
-
 export default IAdvertisment;

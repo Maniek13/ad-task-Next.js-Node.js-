@@ -4,7 +4,6 @@ import IAdvertisment from '../state/IAdvertisment'
 import Advertisement from './adv'
 import ShowAdvertismentList from './schowAdv'
 
-
 class AddAdvertisment extends React.Component <any, any> {
   private advertisment;
 

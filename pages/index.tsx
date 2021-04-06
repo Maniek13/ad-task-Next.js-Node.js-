@@ -3,7 +3,6 @@ import Head from 'next/head'
 import AddAdvertisment from '../object/addAdv'
 import Menu from '../object/menu'
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
