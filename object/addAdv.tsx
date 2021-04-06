@@ -26,7 +26,7 @@ class AddAdvertisment extends React.Component <any, any> {
     }
     else{
       this.advertisment.add(this.getAmount(), this.state.name, this.state.description, this.state.date);
-      this.setState(state => ({ showRecords: true }));
+      this.setState(state => ({ addRecords: true }));
     }
   }
 
