@@ -2,6 +2,13 @@ var url = require('url');
 var mysql = require('mysql');
 const express = require('express');
 
+const connection_parametrs = {
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "tasks"
+}
+
 function parametrs(req){
   let query = url.parse(req.url).query;
   let parametrs = {};
@@ -16,12 +23,7 @@ function parametrs(req){
 }
 
 async function add(name, description, date){
-  let con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "tasks"
-  });
+  const con = mysql.createConnection(connection_parametrs);
 
   return new Promise((resolve, reject) => { 
     con.connect(function(err) {
@@ -35,17 +37,11 @@ async function add(name, description, date){
 }
 
 async function select(){
-  let con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "tasks"
-  });
+  const con = mysql.createConnection(connection_parametrs);
 
   return new Promise((resolve, reject) => { 
     con.connect(function(err) {
       if (err) throw err;
-    
       con.query('SELECT * FROM advertisment', function (err, result, fields) {
         if (err)throw err;
           resolve(result);
