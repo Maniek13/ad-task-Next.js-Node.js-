@@ -6,12 +6,18 @@ import ShowAdvertismentList from './schowAdv'
 
 class AddAdvertisment extends React.Component <any, any> {
   private advertisment;
-
   constructor(props, state:IAdvertisment){
     super(props);
     this.onButtonClick = this.onButtonClick.bind(this);
     this.state = state;
     this.advertisment = new Advertisement(props);
+  }
+
+  async componentDidMount(){
+    let z = await setTimeout(() => {
+      this.setState(state => ({ loaded: true})); 
+    }, 1000);
+
   }
 
   onButtonClick(){
@@ -49,7 +55,7 @@ class AddAdvertisment extends React.Component <any, any> {
   }
 
 render() {
-    return (<React.Fragment>
+    return (<React.Fragment >
     <div className={styles.form}>
     <section className={styles.section}>
     <input  id="name" onChange={this.updateName.bind(this)} ></input>
@@ -58,7 +64,7 @@ render() {
     <button className={styles.action_button} onClick={this.onButtonClick.bind(this)}>Add</button>
     </section>
     </div>
-    <ShowAdvertismentList/>
+    {<ShowAdvertismentList />}
     </React.Fragment>
     );
   }

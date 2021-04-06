@@ -1,12 +1,18 @@
+import { runInThisContext } from 'node:vm';
 import React from 'react'
 import styles from '../pages/styles/index.module.css'
 import Advertisement from './adv'
 
 class ShowAdvertismentList extends React.Component <any, any>{
+
+  constructor(props){
+    super(props);
+  }
+
   render(){   
   let listItems;
-  let array = Advertisement.ad
-
+  let array = Advertisement.ad;
+  
   if(array !== undefined){
     listItems = array.map((item) =>
     <React.Fragment>
@@ -19,7 +25,7 @@ class ShowAdvertismentList extends React.Component <any, any>{
     );
   }
   
-  return <div className={styles.adv_show}>{listItems}</div>;
+  return <div className={styles.adv_show} >{listItems}</div>;
   }
 }
 

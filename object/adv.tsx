@@ -56,7 +56,7 @@ class Advertisement extends React.Component {
         else{
           Advertisement.ad = [element];
         }
-      }); 
+    }); 
   }
     
   delete(id:number):void{
