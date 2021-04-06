@@ -3,6 +3,7 @@ import styles from '../pages/styles/index.module.css'
 import IAdvertisment from '../state/IAdvertisment'
 import Advertisement from './adv'
 import ShowAdvertismentList from './schowAdv'
+import Loading from './loading'
 
 class AddAdvertisment extends React.Component <any, any> {
   private advertisment;
@@ -17,7 +18,6 @@ class AddAdvertisment extends React.Component <any, any> {
     let z = await setTimeout(() => {
       this.setState(state => ({ loaded: true})); 
     }, 1000);
-
   }
 
   onButtonClick(){
@@ -64,7 +64,7 @@ render() {
     <button className={styles.action_button} onClick={this.onButtonClick.bind(this)}>Add</button>
     </section>
     </div>
-    {<ShowAdvertismentList />}
+    {this.state.loaded ? <ShowAdvertismentList /> : <Loading/>}
     </React.Fragment>
     );
   }
