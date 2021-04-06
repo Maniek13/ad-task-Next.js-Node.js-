@@ -5,9 +5,7 @@ class Loading extends React.Component <any, any>{
 
   render(){
     return <div className={styles.adv_show} >
-      <div className={styles.record}>
-        <p>Loading</p>
-      </div>
+      <div className={styles.loading}>Loading</div>
     </div>;
   }
 }
