@@ -5,24 +5,8 @@
   background-color: rgb(255, 0, 0);
 }
 
-.menu_button, .menu_show p, .action_button{
+.action_button{
   cursor: pointer;
-}
-
-.menu_button{
-  position: absolute;
-  left: 0;
-  box-sizing: border-box;
-  width: 100px;
-  height: 50px;
-  background-color: transparent;
-  border: 0px;
-  color: white;
-  font-size: 18px;
-}
-
-.menu_button:focus {
-  outline: 0px!important;
 }
 
 .name{
@@ -40,24 +24,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.menu_show{
-  position: absolute;
-  left: 0px;
-  top: 50px;
-  width: 100px;
-  background-color: rgba(255, 255, 255, 0.507);
-  z-index: 1;
-  border: 1px solid rgb(255, 0, 0);
-  border-top: 0px;
-}
-
-.menu_show a{
-  padding: 10px 10px 10px 10px;
-  display: block;
-  color: black;
-  text-decoration: unset;
 }
 
 .form{
